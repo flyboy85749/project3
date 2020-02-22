@@ -46,7 +46,7 @@ const AddTenant = () => {
         <h2>Add Tenant</h2>
         <div className="field">
           <label htmlFor="first_name" className="label">First Name</label>
-          <div class="control">
+          <div className="control">
             <Field name="first_name" className="input" type="text" placeholder="First Name" />
             <ErrorMessage name="first_name" />
           </div>
@@ -92,25 +92,25 @@ const AddTenant = () => {
           </div>
         </div>
         
-        <div class="field">
+        <div className="field">
           <label htmlFor="rent_status" className="label">Rent Status</label>
-          <div class="control">
+          <div className="control">
             <Field name="rent_status" className="input" type="text" placeholder="Rent Status" />
             <ErrorMessage name="rent_status" />
           </div>
         </div>
         
-        <div class="field">
+        <div className="field">
           <label htmlFor="issues" className="label">Issues</label>
-          <div class="control">
+          <div className="control">
             <Field name="issues" className="input" type="textarea" placeholder="Issues" />
             <ErrorMessage name="issues" />
           </div>
         </div>
         
-        <div class="field">
+        <div className="field">
           <label htmlFor="mgr_comments" className="label">Manager Comments</label>
-          <div class="control">
+          <div className="control">
             <Field name="mgr_comments" className="input" type="text" placeholder="Manager Comments" />
             <ErrorMessage name="mgr_comments" />
           </div>

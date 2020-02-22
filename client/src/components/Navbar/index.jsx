@@ -5,22 +5,19 @@ function NavBarComponent({ loggedIn, _logout }) {
     return (
 
         <nav className="navbar" aria-label="main navigation">
-             <div className="navbar-brand">
+            <div className="navbar-brand">
 
+                <a role="button" href="/" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 
-
-                
-                    <a role="button" href="/" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
-                
 
-                
-            
+
+
+
             <div id="navbarBasicExample" className="navbar-menu">
                 <div className="navbar-start nav_root">
                     <a className="navbar-item" href="/">
@@ -40,27 +37,27 @@ function NavBarComponent({ loggedIn, _logout }) {
                          </a>
 
 
-                         
+
                     <div className="navbar-item has-dropdown is-hoverable">
                         <a className="navbar-link navbar-drop" href="/">
 
                             Manage
                             </a>
 
-                            <div className="navbar-dropdown">
+                        <div className="navbar-dropdown">
                             <a className="navbar-item" href="/ManageTenants">
                                 Tenants
                             </a>
                             <a className="navbar-item" href="/Properties">
                                 Properties
                             </a>
-                            
+
                             <hr className="navbar-divider" />
                             <a className="navbar-item" href="/Issues">
                                 Report an issue
                             </a>
-                            </div>
                         </div>
+                    </div>
 
                     <div className="navbar-end">
                         <div className="navbar-item">

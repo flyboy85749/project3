@@ -11,14 +11,25 @@ export default class SignupForm extends Component {
 			username: '',
 			password: '',
 			confirmPassword: '',
+			admin: false,			
 			redirectTo: null
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
+		this.handleCheck = this.handleCheck.bind(this)
 	}
 	handleChange(event) {
 		this.setState({
 			[event.target.name]: event.target.value
+		})
+	}
+
+	handleCheck (event) {
+		this.setState((prevState) => {
+		   return {
+			  ...prevState,
+			  status: !prevState.status
+		   }
 		})
 	}
 	handleSubmit(event) {
@@ -27,12 +38,13 @@ export default class SignupForm extends Component {
 		axios
 			.post('/auth/signup', {
 				username: this.state.username,
-				password: this.state.password
+				password: this.state.password,
+				admin: this.state.admin
 			})
 			.then(response => {
 				console.log(response)
 				if (!response.data.errmsg) {
-					console.log('youre good')
+					console.log('you are good')
 					this.setState({
 						redirectTo: '/login'
 					})
@@ -48,6 +60,8 @@ export default class SignupForm extends Component {
 		return (
 			<div className="SignupForm">
 				<h1>Signup form</h1>
+				<br />
+				<br />
 				<label htmlFor="username">Username: </label>
 				<input
 					type="text"
@@ -72,6 +86,15 @@ export default class SignupForm extends Component {
 					name="confirmPassword"
 					value={this.state.confirmPassword}
 					onChange={this.handleChange}
+				/>
+				<br />
+				<br />
+				<label htmlFor="admin">Landlord or Industry Professional? </label>
+				<input
+					type="checkbox"
+					name="admin"
+					value={this.state.admin}
+					onChange={this.handleCheck}
 				/>
 				<br />
 				<br />

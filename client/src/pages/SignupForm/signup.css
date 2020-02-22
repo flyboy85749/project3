@@ -4,5 +4,6 @@
 }
 
 .SignupForm h1 {
-    size: 3em;
+    size: 4em;
+    font-weight: 700;
 }
