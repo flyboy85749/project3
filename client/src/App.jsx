@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Route } from 'react-router-dom'
+import Page from './components/Page'
 import LoginForm from './pages/LoginForm'
 import SignupForm from './pages/SignupForm'
 import HomePage from './pages/Home'
@@ -12,10 +13,12 @@ import BlackList from './pages/BlacklistPage'
 import TenantCard from './components/Tenant'
 import Footer from './components/Footer'
 import Resources from './pages/Resources'
+
+import Property from './components/Property'
 // import {db} from './db/db'
 import Gallery from './components/Gallery'
-import Dropzone from './components/Upload/index'
-import PropertyCard from './components/Property'
+// import Dropzone from './components/Upload/index'
+
 
 class App extends Component {
 	constructor(props) {
@@ -87,9 +90,16 @@ class App extends Component {
 				<Route
 					exact
 					path="/"
-					render={() =>
-						<HomePage title="Slumlords R Us - Home" />}
+					render={props => (
+						<Page {...props} component={HomePage} title="Slumlords R Us - Home" />
+					  )}
 				/>
+
+{/* exact
+  path="/"
+  render={props => (
+    <Page {...props} component={HomePage} title="Slumlords R Us - Home" />
+  )} */}
 				<Route
 					exact
 					path="/login"
@@ -101,16 +111,21 @@ class App extends Component {
 				/>
 				<Route
 					exact path="/signup"
-					component={SignupForm}
+					render={props => (
+						<Page {...props} component={SignupForm} title="Slumlords R Us - Signup" />
+					  )}
 				/>
 				<Route
 					exact path="/resources"
-					render={() => <Dropzone />}
+					render={props => (
+						<Page {...props} component={Resources} title="Slumlords R Us - Resources" />
+					  )}
 				/>
 				<Route
-					exact path="/listing"
-					render={() => <Gallery title="Slumlords R Us - Listings" />
-					}
+					exact path="/listings"
+					render={props => (
+						<Page {...props} component={Property} title="Slumlords R Us - Current Listings" />
+					  )}
 				/>
 				<Route
 					exact path="/Test"
@@ -119,7 +134,9 @@ class App extends Component {
 				/>
 				<Route
 					exact path="/ManageTenants"
-					render={() => <AddTenant />}
+					render={props => (
+						<Page {...props} component={AddTenant} title="Slumlords R Us - Add Tenant" />
+					  )}
 				/>
 				<Route
 					exact path="/ManageProperties"
@@ -136,7 +153,7 @@ class App extends Component {
 				/>
 				<Route
 					exact path="/Properties"
-					render={() => <PropertyCard />}
+					render={() => <Property />}
 				/>
 				<Route
 					exact path="/Resources"
