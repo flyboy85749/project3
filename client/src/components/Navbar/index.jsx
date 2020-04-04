@@ -38,7 +38,7 @@ function NavBarComponent({ loggedIn, _logout }) {
 
 
 
-                    <div className="navbar-item has-dropdown is-hoverable">
+                    {/* <div className="navbar-item has-dropdown is-hoverable">
                         <a className="navbar-link navbar-drop" href="/">
 
                             Manage
@@ -57,7 +57,7 @@ function NavBarComponent({ loggedIn, _logout }) {
                                 Report an issue
                             </a>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="navbar-end">
                         <div className="navbar-item">

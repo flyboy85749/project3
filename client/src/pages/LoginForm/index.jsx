@@ -39,7 +39,7 @@ export default class LoginForm extends Component {
 		} else {
 			return (
 				<div className="LoginForm">
-					<h1>Log In</h1>
+					<h2>Log In</h2>
 					<p>Log in with username and password, or login with your Google account</p>
 					<br />
 					<form>

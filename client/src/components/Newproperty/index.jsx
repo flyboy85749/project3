@@ -37,33 +37,82 @@ const Newproperty = () => {
             }}
         >
             <Form>
-                <label htmlFor="unit_no">Unit Number</label>
-                <Field name="unit_no" type="text" />
-                <ErrorMessage name="unit_no" />
-                <br />
-                <label htmlFor="bedrooms">Number of Bedrooms</label>
-                <Field name="bedrooms" type="text" />
-                <ErrorMessage name="bedrooms" />
-                <br />
-                <label htmlFor="sqft">Square Footage of Unit:</label>
-                <Field name="sqft" type="number" />
-                <ErrorMessage name="sqft" />
-                <br />
-                <label htmlFor="occupied">Occupied?</label>
-                <Field name="occupied" type="boolean" />
-                <ErrorMessage name="occupied" />
-                <br />
-                <label htmlFor="date_available">Date Available:</label>
-                <Field name="date_available" type="text" />
-                <ErrorMessage name="date_available" />
-                <br />
-                <label htmlFor="rent">Rent</label>
-                <Field name="rent" type="text" />
-                <ErrorMessage name="rent" />
-                <br />
+        <h2>Add Property</h2>
+        <div className="field">
+          <label htmlFor="unit_no" className="label">Unit Number</label>
+          <div className="control">
+            <Field name="unit_no" className="input" type="text" placeholder="Unit Number?" />
+            <ErrorMessage name="unit_no" />
+          </div>
+        </div>
+      
+        <div className="field">
+          <label htmlFor="bedrooms" className="label">Bedrooms</label>
+          <div className="control">
+            <Field name="bedrooms" className="input" type="text" placeholder="How Many Bedrooms?" />
+            <ErrorMessage name="bedrooms" />
+          </div>
+        </div>
+       
+        <div className="field">
+          <label htmlFor="baths" className="label">Baths</label>
+          <div className="control">
+            <Field name="baths" className="input" type="text" placeholder="How Many Baths?" />
+            <ErrorMessage name="baths" />
+          </div>
+        </div>
+        
+        <div className="field">
+          <label htmlFor="sqft" className="label">Square Footage</label>
+          <div className="control">
+            <Field name="sqft" className="input" type="text" placeholder="How Large is Unit?" />
+            <ErrorMessage name="sqft" />
+          </div>
+        </div>
+    
+        <div className="field">
+          <label htmlFor="occupied" className="label">Occupied</label>
+          <div className="control">
+            <Field name="occupied" className="input" type="checkbox" placeholder="Occupied?" />
+            <ErrorMessage name="occupied" />
+          </div>
+        </div>
+        
+        <div className="field">
+          <label htmlFor="rent_last_paid" className="label">Rent Last Paid</label>
+          <div className="control">
+            <Field name="rent_last_paid" className="input" type="text" placeholder="Rent Last Paid?" />
+            <ErrorMessage name="rent_last_paid" />
+          </div>
+        </div>
+        
+        <div className="field">
+          <label htmlFor="rent_status" className="label">Rent Status</label>
+          <div className="control">
+            <Field name="rent_status" className="input" type="text" placeholder="Rent Status" />
+            <ErrorMessage name="rent_status" />
+          </div>
+        </div>
+        
+        <div className="field">
+          <label htmlFor="issues" className="label">Issues</label>
+          <div className="control">
+            <Field name="issues" className="input" type="textarea" placeholder="Issues" />
+            <ErrorMessage name="issues" />
+          </div>
+        </div>
+        
+        <div className="field">
+          <label htmlFor="mgr_comments" className="label">Manager Comments</label>
+          <div className="control">
+            <Field name="mgr_comments" className="input" type="text" placeholder="Manager Comments" />
+            <ErrorMessage name="mgr_comments" />
+          </div>
+        </div>
+        
 
-                <button type="submit">Submit</button>
-            </Form>
+        <button type="submit">Submit</button>
+      </Form>
         </Formik>
     );
 };

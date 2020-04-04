@@ -1,37 +1,19 @@
 import React from "react";
 
 
-function PropertyCard(props) {
+const Property = () => {
+
+  const listings = ["first", "second", "third"];
+
   return (
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
-      </div>
-      <div className="content">
-        <ul>
-          <li>
-            <strong>Address:</strong> {props.data.address}
-          </li>
-          <li>
-            <strong>City:</strong> {props.data.city}
-          </li>
-          <li>
-            <strong>State:</strong> {props.data.state}
-          </li>
-          <li>
-            <strong>Zip:</strong> {props.data.zip}
-          </li>
-          <li>
-            <strong>Tenant:</strong> {props.data.tenant}
-          </li>
-          <li>
-            <strong>Images:</strong> {props.data.images}
-          </li>
-          
-        </ul>
-      </div>
+    <div>
+      this.listings = listings.map((item, key) =>
+    <li key={listings.id}>{listings.name}</li>
+      );
     </div>
   );
 }
 
-export default PropertyCard;
+
+
+export default Property;

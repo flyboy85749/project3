@@ -161,7 +161,9 @@ class App extends Component {
 				/>
 				<Route
 					exact path="/Contact"
-					render={() => <ContactForm title="Slumlords R Us - Contact Us" />}
+					render={props => (
+						<Page {...props} component={ContactForm} title="Slumlords R Us - Contact Us" />
+					  )}
 				/>
 				{/* {db.properties.mapi((item, index) => {
 					return <PropertyCard key={index} data={item}/>

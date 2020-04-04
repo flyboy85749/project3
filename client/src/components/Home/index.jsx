@@ -1,5 +1,6 @@
 import React from 'react';
 import './home.css';
+import PropertyCard from '../Property'
 
 
 const HomeComponent = () => {
@@ -33,7 +34,7 @@ const HomeComponent = () => {
                         <div className="columns">
                             <div className="column">
                                 <h2>Newest Listings...</h2>
-
+                            <PropertyCard />
                             </div>
                             <div className="column">
                                 <p>More content to go here</p>

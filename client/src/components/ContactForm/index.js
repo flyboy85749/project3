@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import './contactform.css'
 
 
 const ContactForm = () => {
@@ -25,7 +26,7 @@ const ContactForm = () => {
             }}
         >
             <Form>
-                <h2>Contact Us</h2>
+                <h1>Contact Us</h1>
                 <div className="field">
                     <label htmlFor="firstName" className="label">First Name</label>
                     <div class="control">
